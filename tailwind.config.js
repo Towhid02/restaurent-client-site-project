@@ -22,7 +22,8 @@ export default {
         'detailBg': "url(../src/assets/back5.jpg)",
         'menuBg': "url(../public/assets/menu.jpg)",
         'experienceBg': "url(../public/assets/bg_experience.jpg)",
-        'foodBg': "url(../public/assets/client.jpg)"
+        'foodBg': "url(../public/assets/client.jpg)",
+        'backBg': "url(../public/assets/banner-2.avif)"
       }
     },
   },
