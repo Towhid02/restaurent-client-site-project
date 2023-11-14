@@ -21,9 +21,8 @@ export default {
         'bannerBg': "url(../public/assets/bannner-rest.jpg)",
         'detailBg': "url(../src/assets/back5.jpg)",
         'menuBg': "url(../public/assets/menu.jpg)",
-        'slider_1': "url(../../public/assets/slider_1.avif)",
-        'slider_2': "url(../../public/assets/slider_2.avif)",
-        'slider_3': "url(../../public/assets/slider_3.avif)",
+        'experienceBg': "url(../public/assets/bg_experience.jpg)",
+        'foodBg': "url(../public/assets/client.jpg)"
       }
     },
   },
