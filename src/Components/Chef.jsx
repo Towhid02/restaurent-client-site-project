@@ -5,11 +5,11 @@ import chef_3 from "../../public/assets/chef-3.jpg"
 const Chef = () => {
     return (
         <div>
-            <h1>
+            <h1 className="text-4xl font-galada py-10">
             Experts Our Team
             </h1>
 
-            <div className=" grid grid-cols-1 lg:grid-cols-3">
+            <div className=" grid grid-cols-1 lg:grid-cols-3" data-aos="zoom-in">
 
             <div className="card  shadow-xl">
             <figure><img className=" rounded-3xl w-60" src={chef_3} alt="Album"/></figure>

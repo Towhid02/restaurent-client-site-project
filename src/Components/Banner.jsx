@@ -11,7 +11,7 @@ const Banner = () => {
     <Navbar></Navbar>
   </div>
   <div className=" text-black my-40">
-    <div className="max-w-md text-center ">
+    <div className="max-w-md text-center " data-aos="fade-up">
       <h1 className="mb-5 text-7xl font-galada font-bold">Welcome</h1>
       <p className="mb-5 font-grand text-3xl">Experience the Authentic Flavors of Bangladesh!
 Indulge in a Culinary Journey to the Heart of Bengal

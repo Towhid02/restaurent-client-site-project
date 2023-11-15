@@ -18,12 +18,14 @@ export default {
       backgroundImage : {
         'navBg': "url(../src/assets/nav.png)",
         'footerBg': "url(../public/assets/footer.jpg)",
-        'bannerBg': "url(../public/assets/bannner-rest.jpg)",
+        'bannerBg': "url(../public/assets/banner-5.jpg)",
         'detailBg': "url(../src/assets/back5.jpg)",
         'menuBg': "url(../public/assets/menu.jpg)",
         'experienceBg': "url(../public/assets/bg_experience.jpg)",
         'foodBg': "url(../public/assets/client.jpg)",
-        'backBg': "url(../public/assets/banner-2.avif)"
+        'backBg': "url(../public/assets/banner-2.avif)",
+        'addFoodBg': "url(../public/assets/addFood.jpg)",
+        'headerBg' : "url(../public/assets/)"
       }
     },
   },

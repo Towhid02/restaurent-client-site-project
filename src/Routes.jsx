@@ -6,7 +6,10 @@ import Home from "./Pages/Home";
 import SignUp from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
 import Menu from "./Pages/Menu";
-import Lunch from "./Components/Lunch";
+import AddFood from "./Pages/AddFood";
+import Details from "./Pages/Details";
+import ModifyFood from "./Pages/ModifyFood";
+import Items from "./Pages/Items";
 
   const router = createBrowserRouter([
     {
@@ -16,7 +19,7 @@ import Lunch from "./Components/Lunch";
         {
             path: "/",
             element: <Home></Home>,
-            // loader: () => fetch('https://localhost:5000/menu'),
+            loader: () => fetch('http://localhost:5000/categories/'),
         },
         {
           path: "/signUp",
@@ -27,27 +30,29 @@ import Lunch from "./Components/Lunch";
           element:<SignIn></SignIn>,
         },
         {
-          path: "/breakfast",
-          element:<Lunch></Lunch>,
-          loader: () => fetch('http://localhost:5000/breakfast'),
-          
+          path: "/addFood",
+          element:<AddFood></AddFood>,
         },
         {
-          path: "/lunch",
-          element:<Lunch></Lunch>,
-          loader: () => fetch('http://localhost:5000/lunch'),
-          
-        },
+          path: "/category/:category",
+          element:<Items></Items> ,
+          loader: ({params}) => fetch(`http://localhost:5000/category/${params.category}/`)
+             
+      },
         {
-          path: "/dinner",
-          element:<Lunch></Lunch>,
-          loader: () => fetch('http://localhost:5000/dinner'),
-          
-        },
+          path: "/updateFood/:id",
+          element:<ModifyFood></ModifyFood>,
+          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}/`)
+      },
         {
           path: "/signIn",
           element:<SignIn></SignIn>,
         },
+        {
+          path: "/details/:id",
+          element:<Details></Details> ,
+          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}/`)
+      },
         {
           path: "/menu",
           element:<Menu></Menu>,

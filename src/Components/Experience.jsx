@@ -4,7 +4,7 @@ const Experience = () => {
     return (
         <div className=" bg-experienceBg">
             <div className="flex flex-row-reverse  justify-center items-center px-5 py-10 gap-10">
-                <div className="flex-1">
+                <div className="flex-1" data-aos="zoom-out-down">
                     <img className=" rounded-lg" src={experience} alt="" />
                 </div>
                 <div className="flex-1">
