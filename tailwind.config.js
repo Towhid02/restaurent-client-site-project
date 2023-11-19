@@ -25,7 +25,7 @@ export default {
         'foodBg': "url(../public/assets/client.jpg)",
         'backBg': "url(../public/assets/banner-2.avif)",
         'addFoodBg': "url(../public/assets/addFood.jpg)",
-        'headerBg' : "url(../public/assets/)"
+        'headerBg' : "url(../public/assets/bannerBg.jpg)"
       }
     },
   },

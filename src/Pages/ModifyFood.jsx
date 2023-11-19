@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
+
 const ModifyFood = () => {
 
     const menu = useLoaderData()
@@ -13,15 +14,15 @@ const ModifyFood = () => {
 
         const form = event.target;
 
-        const food_name = form.name.value;
+        const name = form.name.value;
         const category = form.category.value;
         const quantity = form.quantity.value;
-        const chief_name = form.chef.value;
+        const chef = form.chef.value;
         const origin = form.origin.value;
         const price = form.price.value;
         const image = form.image.value;
 
-        const updatedFood = { food_name, category, quantity, chief_name, origin, price,image }
+        const updatedFood = { name, category, quantity, chef, origin, price,image }
 
         console.log(updatedFood);
         fetch(`http://localhost:5000/menu/${menu._id}`, {
@@ -34,7 +35,7 @@ const ModifyFood = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedCount > 0){
                 Swal.fire({
                     title: 'Success!',
                     text: 'Food Item Updated Successfully',

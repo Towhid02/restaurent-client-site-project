@@ -1,6 +1,7 @@
 
 import Banner from '../Components/Banner';
 import Chef from '../Components/Chef';
+import Customer from '../Components/Customer';
 import Experience from '../Components/Experience';
 
 import Footer from '../Components/Footer';
@@ -18,6 +19,7 @@ const Home = () => {
             <Slider></Slider>
             <Experience></Experience>
             <Chef></Chef>
+            <Customer></Customer>
             <Footer></Footer>
             </div>
            

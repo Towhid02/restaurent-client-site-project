@@ -10,7 +10,7 @@ const Details = () => {
     const menu = useLoaderData()
     console.log(menu);
 
-    const {_id, food_name, category, chief_name, origin, price, image, short_description }= menu;
+    const {_id, name, category, chef, origin, price, image, short_description }= menu;
 
     const  handleCart = ()=> {
       const data = {
@@ -29,18 +29,11 @@ const Details = () => {
   <div className="card-body" data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-    <h2 className="card-title text-[#046C4E] text-3xl md:text-5xl font-itim">{food_name} </h2>
+    <h2 className="card-title text-[#046C4E] text-3xl md:text-5xl font-itim">{name} </h2>
     <h2 className="card-title text-[#046C4E] text-3xl md:text-5xl font-itim">{category} </h2>
-    <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli ">Chef Name: {chief_name}</h2>
-    <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli">Origin : {origin} & Four Wheeler</h2>
+    <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli ">Chef Name: {chef}</h2>
+    <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli">Origin : {origin}</h2>
     <h2 className="card-title text-[#046C4E] text-xl md:text-3xl font-mooli"> Price : {price} Tk </h2>
-    <div className="rating ">
-  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
-  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500"  />
-  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
-  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" />
-  <input type="radio" name="rating-4" className="mask mask-star-2 bg-red-500" checked />
-</div>
     <p className="font-itim text-blue-800 text-xl text-justify">{short_description}</p>
   </div>
   <div className="">
