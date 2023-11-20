@@ -8,7 +8,8 @@ import slider_6 from "../../public/assets/slider-5.jpeg"
 
 const Slider = () => {
     return (
-        <div className=' max-w-3xl mx-auto my-5'>     
+        <div className=' bg-sliderBg'>
+        <div className='card mx-auto my-5'>     
            <div className="h-80">
            <Carousel>
         <img className=' w-full h-96' src={slider_2} alt="..." />
@@ -19,6 +20,7 @@ const Slider = () => {
       </Carousel>
     </div>
  
+        </div>
         </div>
     );
 };

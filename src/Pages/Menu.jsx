@@ -5,10 +5,12 @@ import MenuCard from "../Components/MenuCard";
 import Navbar from "../Components/Navbar";
 
 import Footer from "../Components/Footer";
+import { useState } from "react";
 
 
 const Menu = () => {
-    const menu = useLoaderData()
+    const loadedMenu = useLoaderData()
+    const [menus, setMenus] = useState(loadedMenu)
     // const [allMenu, setAllMenu] = useState(loadedMenu)
     return (
         <div className="bg-menuBg relative  rounded-3xl">
@@ -22,12 +24,12 @@ const Menu = () => {
            
 
             {
-                menu.map(menu=> 
+                loadedMenu.map(menu=> 
                 <MenuCard 
                 key={menu._id}
                 menu={menu}
-                // allMenu={allMenu}
-                // setAllMenu={setAllMenu}
+                menus={menus}
+                setMenus={setMenus}
                 ></MenuCard>)
             }
         

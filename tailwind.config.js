@@ -25,7 +25,10 @@ export default {
         'foodBg': "url(../public/assets/client.jpg)",
         'backBg': "url(../public/assets/banner-2.avif)",
         'addFoodBg': "url(../public/assets/addFood.jpg)",
-        'headerBg' : "url(../public/assets/bannerBg.jpg)"
+        'headerBg' : "url(../public/assets/bannerBg.jpg)",
+        'categoryBg' : "url(../public/assets/menu1.avif)",
+        'cardBg' : "url(../public/assets/bg-2.avif)",
+        'sliderBg' : "url(../public/assets/sliderBg.jpg)"
       }
     },
   },

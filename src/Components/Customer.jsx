@@ -11,13 +11,13 @@ const Customer = () => {
                 <h1 className='text-3xl font-galada'>
                 What our customer saying?
                 </h1>
-                <div className='flex md:flex-row lg:flex-col justify-center gap-5 '>
+                <div className='flex justify-center items-center gap-5 '>
                     <div className='flex-1 card'>
-                        <p className=' font-itim'>
-                        Discover the heartbeat of our restaurant through the words of our satisfied customers. Experience culinary delight and impeccable service as shared by those who have savored the flavors and ambiance that make dining at our establishment an unforgettable experience. Join the chorus of delighted patrons and indulge in a dining journey that speaks for itself.
+                        <p className=' font-itim '>
+                        Discover the heartbeat of our restaurant through the words of our satisfied customers. Experience culinary delight and impeccable service as shared by those who have savored the flavors and ambiance that make dining at our establishment an unforgettable experience.
                         </p>
                     </div>
-                    <div className='flex-1 card '>
+                    <div className='flex-1 h-80  py-5'>
                     <Carousel>
         <img src={customer_1} alt="..." />
         <img src={customer_2} alt="..." />

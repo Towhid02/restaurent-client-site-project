@@ -13,7 +13,7 @@ const Items = () => {
     return (
         <div>
             <Header setResults={setResults}></Header>
-            <div className=" grid grid-cols-3 gap-5 text-center my-10">
+            <div className=" grid  lg:grid-cols-3 gap-5 text-center my-10">
             {
                  foods.map(food => <FoodCard  key={food.id}
                  foods={food}

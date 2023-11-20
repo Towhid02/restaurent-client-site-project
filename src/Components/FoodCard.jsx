@@ -6,12 +6,12 @@ const FoodCard = ({foods}) => {
     const { _id, name, category, origin, price, image }= foods;
     return (
         <div>
-            <div className="card card-compact bg-base-100 glass shadow-xl">
+            <div className=" bg-cardBg   bg-contain card  bg-base-100 glass shadow-xl">
   <figure className=" ">
-    <img src={image}alt="Shoes" className="rounded-xl w-60 h-40 " />
+    <img src={image}alt="Shoes" className="rounded-xl w-full h-80 md:h-60 " />
   </figure>
   <div className="card-body items-center text-center">
-    <h2 className="card-title text-xl md:text-xl font-mooli"> {name}</h2>
+    <h2 className="card-title text-xl md:text-2xl font-mooli"> {name}</h2>
    
     <h2 className=" font-mooli  "> Category: {category}</h2>
     <h2 className=" font-mooli font-semibold">Origin:  {origin}</h2>

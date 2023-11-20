@@ -11,8 +11,8 @@ import Foods from './Foods';
 
 const Home = () => {
     return (
-        <div className=' '>
-            <div>
+        <div>
+            <div >
             <Banner></Banner>
             {/* <FoodItems></FoodItems> */}
             <Foods></Foods>
