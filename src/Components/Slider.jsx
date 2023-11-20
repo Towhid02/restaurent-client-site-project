@@ -8,7 +8,7 @@ import slider_6 from "../../public/assets/slider-5.jpeg"
 
 const Slider = () => {
     return (
-        <div className=' bg-sliderBg'>
+        <div className=' bg-sliderBg bg-contain'>
         <div className='card mx-auto my-5'>     
            <div className="h-80">
            <Carousel>

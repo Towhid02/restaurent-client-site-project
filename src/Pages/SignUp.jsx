@@ -63,7 +63,7 @@ const SignUp = () => {
       setSuccess(
         Swal.fire(
           'Good job!',
-          'You clicked the button!',
+          'Sign up Completed!',
           'success'
         )
       )
@@ -76,13 +76,14 @@ const SignUp = () => {
     return (
         <div>
         
-            <div className="md:hero  min-h-screen bg-base-200 bg-signBg rounded-3xl">
+        <div className="hero bg-loginBg bg-cover  rounded-3xl">
+             <div className="hero-overlay bg-opacity-20"></div>
   <div className="hero-content flex-col ">
     <div className="text-center ">
       <h1 className=" text-3xl md:text-5xl font-bold font-mooli text-white my-5">Sign Up now!</h1>
       
     </div>
-    <div className="card flex-shrink-0 w-full bg-base-100 max-w-lg shadow-2xl">
+    <div className="card flex-shrink-0 w-full max-w-lg ">
       <form className="card-body" onSubmit={handleSignUp}>
         <div className="form-control">
           <label className="label">

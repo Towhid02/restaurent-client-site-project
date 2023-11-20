@@ -62,15 +62,16 @@ const SignIn = () => {
         })
             }
     return (
-        <div>
+        <div className="">
         
-             <div className=" md:hero min-h-screen bg-base-200 bg-signBg rounded-3xl">
+             <div className="hero bg-loginBg bg-cover  rounded-3xl">
+             <div className="hero-overlay bg-opacity-20"></div>
   <div className="hero-content flex-col ">
     <div className="text-center ">
-      <h1 className=" text-3xl md:text-5xl font-bold font-mooli text-white">Sign In now!</h1>
+      <h1 className="text-3xl md:text-5xl font-bold font-mooli text-white">Sign In now!</h1>
       
     </div>
-    <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
+    <div className=" flex-shrink-0 w-full  shadow-2xl">
       <form className="card-body" onSubmit={handleSignIn}>
         <div className="form-control" >
           <label className="label">
