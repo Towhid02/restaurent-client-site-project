@@ -11,6 +11,8 @@ import Details from "./Pages/Details";
 import ModifyFood from "./Pages/ModifyFood";
 import Items from "./Pages/Items";
 import Error from "./Pages/Error";
+import Blog from "./Pages/Blog";
+import AddOrder from "./Pages/AddOrder";
 
   const router = createBrowserRouter([
     {
@@ -36,6 +38,10 @@ import Error from "./Pages/Error";
           element:<AddFood></AddFood>,
         },
         {
+          path: "/blog",
+          element:<Blog></Blog>,
+        },
+        {
           path: "/category/:category",
           element:<Items></Items> ,
           loader: ({params}) => fetch(`http://localhost:5000/category/${params.category}/`)
@@ -59,7 +65,11 @@ import Error from "./Pages/Error";
           path: "/menu",
           element:<Menu></Menu>,
           loader: () => fetch('http://localhost:5000/menu'),
-        }
+        },
+        {
+          path: "/addOrder",
+          element: <AddOrder></AddOrder>,
+      },
       ]
     },
   ]);
