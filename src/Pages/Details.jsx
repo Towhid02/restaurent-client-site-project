@@ -21,7 +21,6 @@ const Details = () => {
         products: menu
 
       }  
-      
       console.log(data);
       fetch('https://y-orcin-nu.vercel.app/orders',  {
         mode: 'no-cors',
