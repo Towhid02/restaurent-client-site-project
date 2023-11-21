@@ -17,7 +17,7 @@ const FoodCard = ({food}) => {
     <h2 className="md:card-title font-itim">Price: {price} TK </h2>
     
     <div className="card-actions">
-    <button type="button" className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"><Link to={`/details/${_id}`}>DETAILS</Link></button>
+    <button type="button" className="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 font-itim mb-2"><Link to={`/details/${_id}`}>DETAILS</Link></button>
     </div>
   </div>
 </div>

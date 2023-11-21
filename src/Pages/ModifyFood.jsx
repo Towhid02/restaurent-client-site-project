@@ -2,6 +2,7 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 
 
@@ -136,6 +137,7 @@ const ModifyFood = () => {
 
             </form>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
