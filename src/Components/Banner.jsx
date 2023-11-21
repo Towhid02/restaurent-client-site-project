@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div>
           <div className="hero md:min-h-min bg-bannerBg bg-center bg-no-repeat bg-cover rounded-3xl" >
-  <div className="hero-overlay bg-opacity-20"></div>
+  <div className="hero-overlay bg-opacity-40"></div>
   <div className=" w-full absolute top-0 bg-opacity-60 z-10">
     
   </div>
