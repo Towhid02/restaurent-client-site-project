@@ -5,7 +5,7 @@ import chef_3 from "../../public/assets/chef-3.jpg"
 const Chef = () => {
     return (
         <div className=" hero bg-expertBg bg-contain  rounded-2xl ">
-            <div className="hero-overlay bg-opacity-80"></div>
+            <div className="hero-overlay bg-opacity-70 "></div>
             <div className="pt-16 text-white">
             <h1 className="text-4xl font-galada ">
             Experts Our Team

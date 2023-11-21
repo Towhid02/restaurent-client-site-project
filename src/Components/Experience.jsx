@@ -2,7 +2,7 @@ import experience from "../../public/assets/experience.png"
 
 const Experience = () => {
     return (
-        <div className=" bg-experienceBg">
+        <div className=" bg-experienceBg bg-cover rounded-2xl">
             <h1 className=" pt-5 text-2xl md:text-3xl font-galada font-bold text-slate-700">Our Restaurant 5 years working experience.</h1>
             <div className="grid grid-cols-1 md:grid-cols-2  justify-center items-center px-5 py-10 gap-10">
             <div className="">

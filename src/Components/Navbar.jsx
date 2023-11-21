@@ -9,14 +9,14 @@ const Navbar = () => {
 
   const {user, logOut} = useContext(AuthContext)
     const Links = <>
-         <li className="text-white"><Link to={"/"}>Home</Link></li>
-         <li><Link to={"/menu"}>All Food</Link></li>
+         <li><Link to={"/"}>Home</Link></li>
+         <li ><Link to={"/menu"}>All Food</Link></li>
          
-         <li><Link to={"/blog"}>Blog</Link></li>
-         <li><Link to={"/signUp"}>Sign Up</Link></li>
+         <li ><Link to={"/blog"}>Blog</Link></li>
+         <li ><Link to={"/signUp"}>Sign Up</Link></li>
     </>
     return (
-        <div className="  w-full  border-2 rounded-3xl m-2 py-2 " >
+        <div className=" bg-navBg  bg-cover bg-opacity-30 w-full  border-2 rounded-3xl m-2 py-2 " >
          
             <div className="navbar navbar-expand-lg navbar-dark shadow-5-strong rounded-lg">
               
@@ -32,7 +32,7 @@ const Navbar = () => {
     <img className=" w-24 md:w-52 rounded-full"  src={logo} alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-white  font-mooli text-base font-semibold">
+    <ul className="menu menu-horizontal px-1 text-black  font-mooli text-base font-semibold">
       {Links}
     </ul>
   </div>
@@ -42,7 +42,7 @@ const Navbar = () => {
     </div>
  
   {
-                !user ?  <li className="btn text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"><Link to={'/signIn'}>Sign In</Link></li> 
+                !user ?  <li className="btn text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-3xl text-sm px-5 py-2.5 text-center me-2 mb-2"><Link to={'/signIn'}>Sign In</Link></li> 
                 :  <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-8 md:w-12 rounded-full">

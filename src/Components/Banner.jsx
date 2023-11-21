@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+
 
 
 const Banner = () => {
     return (
         <div>
-          <div className="hero md:min-h-min bg-bannerBg bg-center bg-no-repeat bg-cover relative" >
+          <div className="hero md:min-h-min bg-bannerBg bg-center bg-no-repeat bg-cover rounded-3xl" >
   <div className="hero-overlay bg-opacity-20"></div>
   <div className=" w-full absolute top-0 bg-opacity-60 z-10">
-    <Navbar></Navbar>
+    
   </div>
   <div className=" text-black my-40">
     <div className="max-w-md text-center " data-aos="fade-up">
