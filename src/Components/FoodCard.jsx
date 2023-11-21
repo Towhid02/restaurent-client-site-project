@@ -7,10 +7,10 @@ const FoodCard = ({food}) => {
     return (
         <div>
             <div className="  card glass shadow-xl">
-  <figure className=" ">
+  <figure>
     <img src={image} className="rounded-xl w-full h-40 md:h-60 " />
   </figure>
-  <div className="card-body items-center text-center">
+  <div className="card-body items-center text-center text-black">
     <h2 className="card-title text-xl md:text-2xl font-mooli"> {name}</h2>
     <h2 className=" font-mooli  "> Category: {category}</h2>
     <h2 className=" font-mooli font-semibold">Origin:  {origin}</h2>

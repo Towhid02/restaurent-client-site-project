@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import FoodCard from "../Components/FoodCard";
 import { useParams } from "react-router-dom";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 
 const Items = () => {
@@ -13,7 +15,7 @@ const Items = () => {
     const fetchFood
      = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/category/${params.category}/`);
+        const response = await fetch(`https://y-orcin-nu.vercel.app/category/${params.category}/`);
         const result = await response.json();
         setFoods(result);
       } catch (error) {
@@ -30,7 +32,7 @@ const Items = () => {
   const handleSearch = (value) => {
     setInput(value);
 
-    fetch("http://localhost:5000/menu")
+    fetch("https://y-orcin-nu.vercel.app/menu")
       .then((res) => res.json())
       .then((json) => {
         const results = json.filter((menu) =>
@@ -43,13 +45,13 @@ const Items = () => {
 
   return (
     <div>
-         <div className="bg-headerBg w-full h-96 rounded-2xl">
-          <div>
-            <h1 className="card card-title text-2xl text-white px-20">
-              In our kitchen, we believe in magic — the kind that happens when
-              ingredients are crafted with love.
+      <Navbar></Navbar>
+         <div className="bg-headerBg bg-cover w-full h-96 rounded-2xl">
+          <div className="card">
+            <h1 className="card card-title text-lg md:text-2xl lg:text-3xl text-white px-8 md:px-24">
+              In our kitchen, we believe in magic the kind that happens when ingredients are crafted with love.
             </h1>
-            <div className="flex justify-center">
+            <div className=" justify-center">
               <input
                 type="text"
                 placeholder="Search here"
@@ -60,12 +62,13 @@ const Items = () => {
             </div>
           </div>
         </div>
-      <div className=" bg-cardBg  bg-contain grid grid-col-2 lg:grid-cols-3 gap-10 text-center p-10">
+      <div className=" bg-cardBg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
        
         {foods.map((food) => (
           <FoodCard key={food._id} food={food}></FoodCard>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 };

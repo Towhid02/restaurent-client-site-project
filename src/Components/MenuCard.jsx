@@ -21,7 +21,7 @@ const MenuCard = ({menu, menus, setMenus}) => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/menu/${_id}`, {
+                fetch(`https://y-orcin-nu.vercel.app/menu/${_id}`, {
                     method: 'DELETE'
                 })
                 .then (res => res.json())

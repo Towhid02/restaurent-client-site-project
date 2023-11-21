@@ -21,7 +21,7 @@ const Details = () => {
       }  
       
       console.log(data);
-      fetch('http://localhost:5000/orders', {
+      fetch('https://y-orcin-nu.vercel.app/orders', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

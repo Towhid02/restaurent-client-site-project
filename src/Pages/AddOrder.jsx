@@ -12,7 +12,7 @@ const AddOrder = (data) => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/orders/${user.email}`)
+      fetch(`https://y-orcin-nu.vercel.app/orders/${user.email}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

@@ -20,7 +20,7 @@ const AddFood = () => {
         const newFood = { name, category, quantity, chef, origin, price,image }
 
         console.log(newFood);
-        fetch('http://localhost:5000/menu', {
+        fetch('https://y-orcin-nu.vercel.app/menu', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

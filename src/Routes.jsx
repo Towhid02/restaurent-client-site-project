@@ -23,7 +23,7 @@ import AddOrder from "./Pages/AddOrder";
         {
             path: "/",
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:5000/categories/'),
+            loader: () => fetch('https://y-orcin-nu.vercel.app/categories/'),
         },
         {
           path: "/signUp",
@@ -44,13 +44,13 @@ import AddOrder from "./Pages/AddOrder";
         {
           path: "/category/:category",
           element:<Items></Items> ,
-          loader: ({params}) => fetch(`http://localhost:5000/category/${params.category}/`)
+          loader: ({params}) => fetch(`https://y-orcin-nu.vercel.app/category/${params.category}/`)
              
       },
         {
           path: "/updateFood/:id",
           element:<ModifyFood></ModifyFood>,
-          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}/`)
+          loader: ({params}) => fetch(`https://y-orcin-nu.vercel.app/menu/${params.id}/`)
       },
         {
           path: "/signIn",
@@ -59,12 +59,12 @@ import AddOrder from "./Pages/AddOrder";
         {
           path: "/details/:id",
           element:<Details></Details> ,
-          loader: ({params}) => fetch(`http://localhost:5000/menu/${params.id}/`)
+          loader: ({params}) => fetch(`https://y-orcin-nu.vercel.app/menu/${params.id}/`)
       },
         {
           path: "/menu",
           element:<Menu></Menu>,
-          loader: () => fetch('http://localhost:5000/menu'),
+          loader: () => fetch('https://y-orcin-nu.vercel.app/menu'),
         },
         {
           path: "/addOrder",

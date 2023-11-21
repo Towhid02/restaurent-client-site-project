@@ -25,7 +25,7 @@ const ModifyFood = () => {
         const updatedFood = { name, category, quantity, chef, origin, price,image }
 
         console.log(updatedFood);
-        fetch(`http://localhost:5000/menu/${menu._id}`, {
+        fetch(`https://y-orcin-nu.vercel.app/menu/${menu._id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
