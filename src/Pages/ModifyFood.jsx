@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Navbar from "../Components/Navbar";
 
 
 
@@ -48,8 +49,9 @@ const ModifyFood = () => {
 
     return (
         <div>
-            <div className=" bg-addFoodBg bg-cover p-10 md:p-24 rounded-3xl my-8 " >
-            <h2 className="text-3xl font-extrabold text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800  rounded-full px-5 py-2.5 text-center mr-2 mb-2 font-itim">MODIFY FOOD ITEMS</h2>
+            <Navbar></Navbar>
+            <div className=" bg-addFoodBg bg-cover m-5 md:p-24 rounded-3xl my-8 " >
+            <h2 className="text-xl lg:text-3xl font-extrabold text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800  rounded-full px-5 py-2.5 text-center mr-2 mb-2 font-itim">MODIFY FOOD ITEMS</h2>
             <form onSubmit={handleUpdateFood}>
               
                 <div className="md:flex mb-8">

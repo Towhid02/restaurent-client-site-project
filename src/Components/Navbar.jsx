@@ -16,7 +16,7 @@ const Navbar = () => {
          <li><Link to={"/signUp"}>Sign Up</Link></li>
     </>
     return (
-        <div className="  w-full  border-2 rounded-3xl px-10 py-2 " >
+        <div className="  w-full  border-2 rounded-3xl m-2 py-2 " >
          
             <div className="navbar navbar-expand-lg navbar-dark shadow-5-strong rounded-lg">
               
@@ -29,7 +29,7 @@ const Navbar = () => {
        {Links}
       </ul>
     </div>
-    <img className=" w-32 md:w-52 rounded-full"  src={logo} alt="" />
+    <img className=" w-24 md:w-52 rounded-full"  src={logo} alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 text-white  font-mooli text-base font-semibold">
@@ -45,7 +45,7 @@ const Navbar = () => {
                 !user ?  <li className="btn text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"><Link to={'/signIn'}>Sign In</Link></li> 
                 :  <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
+                  <div className="w-8 md:w-12 rounded-full">
                     <img src={user?.photoURL ? user?.photoURL : "../../public/assets/avater.avif"} />
                   </div>
                 </label>

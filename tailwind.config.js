@@ -16,7 +16,7 @@ export default {
 
       },
       backgroundImage : {
-        'navBg': "url(../src/assets/nav.png)",
+        
         'loginBg': "url(../public/assets/login.jpg)",
         'footerBg': "url(../public/assets/footer.jpg)",
         'bannerBg': "url(../public/assets/banner-5.jpg)",
@@ -31,6 +31,7 @@ export default {
         'cardBg' : "url(../public/assets/bg-2.avif)",
         'expertBg' : "url(../public/assets/bg4.avif)",
         'customerBg' : "url(../public/assets/bg5.jpg)",
+        'blogBg' : "url(../public/assets/blogBg.avif)",
         'sliderBg' : "url(../public/assets/sliderBg.jpg)"
       }
     },

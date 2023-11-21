@@ -8,6 +8,7 @@ import Footer from "../Components/Footer";
 
 const Items = () => {
   const [foods, setFoods] = useState([]);
+  const [isShow, setShowAll] = useState(false)
   const [input, setInput] = useState("");
   const params = useParams();
 
@@ -62,12 +63,24 @@ const Items = () => {
             </div>
           </div>
         </div>
-      <div className=" bg-cardBg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
-       
-        {foods.map((food) => (
+      
+      <div className=" bg-cardBg ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
+        {
+        isShow ?foods.map((food) => (
           <FoodCard key={food._id} food={food}></FoodCard>
-        ))}
+        ))
+        :foods.slice(0,6).map((food) => (
+          <FoodCard  key={food._id} food={food}></FoodCard>))
+        }
+        </div>
+        <div>
+      {
+                foods.length > 6 &&  <button onClick={()=> setShowAll(!isShow)} className=" btn  text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 rounded-full dark:focus:ring-cyan-800 font-medium  text-sm px-5 py-2.5 text-center me-2 mb-2">{isShow ? "Show Less" : "Show More"}</button>
+            }
       </div>
+      </div>
+     
       <Footer></Footer>
     </div>
   );
