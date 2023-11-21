@@ -23,7 +23,8 @@ const Details = () => {
       }  
       
       console.log(data);
-      fetch('https://y-orcin-nu.vercel.app/orders', {
+      fetch('https://y-orcin-nu.vercel.app/orders',  {
+        mode: 'no-cors',
         method: 'POST',
         headers: {
             'content-type': 'application/json'
@@ -39,7 +40,14 @@ const Details = () => {
                     text: 'Order Added Successfully',
                     icon: 'success',
                     confirmButtonText: 'Cool'
-                  })
+                  });
+                } else {
+                  Swal.fire({
+                    title: 'Error!',
+                    text: 'Failed to add order',
+                    icon: 'error',
+                    confirmButtonText: 'Ok',
+                  });
             }
         })
     }
@@ -60,7 +68,7 @@ const Details = () => {
     <p className="font-itim text-white text-2xl text-justify">{short_description}</p>
   </div>
   <div className="">
-  <button type="button" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2 font-itim"><Link to={`/updateFood/${_id}`}>Modify</Link></button>
+  <button type="button" className="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-full text-xl px-5 py-2.5 text-center mr-2 mb-2"><Link to={`/updateFood/${_id}`}>Modify</Link></button>
 
   <button type="button" className=" relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-xl font-medium text-gray-900 rounded-full group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-itim" onClick={()=> handleOrder()}>
   <span className="relative px-5 py-2.5 transition-all ease-in duration-75  dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">Order</span></button>

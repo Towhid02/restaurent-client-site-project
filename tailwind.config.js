@@ -18,6 +18,7 @@ export default {
       backgroundImage : {
         
         'loginBg': "url(../public/assets/login.jpg)",
+        'orderBg': "url(../public/assets/bg3.jpg)",
         'navBg': "url(../public/assets/navBg.png)",
         'footerBg': "url(../public/assets/footer.jpg)",
         'bannerBg': "url(../public/assets/banner-5.jpg)",

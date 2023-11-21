@@ -13,6 +13,7 @@ import Items from "./Pages/Items";
 import Error from "./Pages/Error";
 import Blog from "./Pages/Blog";
 import AddOrder from "./Pages/AddOrder";
+import PrivateRoutes from "./Components/PrivateRoutes";
 
   const router = createBrowserRouter([
     {
@@ -35,7 +36,7 @@ import AddOrder from "./Pages/AddOrder";
         },
         {
           path: "/addFood",
-          element:<AddFood></AddFood>,
+          element:<PrivateRoutes><AddFood></AddFood></PrivateRoutes>,
         },
         {
           path: "/blog",
@@ -43,22 +44,18 @@ import AddOrder from "./Pages/AddOrder";
         },
         {
           path: "/category/:category",
-          element:<Items></Items> ,
+          element:<PrivateRoutes><Items></Items></PrivateRoutes> ,
           loader: ({params}) => fetch(`https://y-orcin-nu.vercel.app/category/${params.category}/`)
              
       },
         {
           path: "/updateFood/:id",
-          element:<ModifyFood></ModifyFood>,
+          element:<PrivateRoutes><ModifyFood></ModifyFood></PrivateRoutes>,
           loader: ({params}) => fetch(`https://y-orcin-nu.vercel.app/menu/${params.id}/`)
       },
         {
-          path: "/signIn",
-          element:<SignIn></SignIn>,
-        },
-        {
           path: "/details/:id",
-          element:<Details></Details> ,
+          element:<PrivateRoutes><Details></Details></PrivateRoutes> ,
           loader: ({params}) => fetch(`https://y-orcin-nu.vercel.app/menu/${params.id}/`)
       },
         {
@@ -68,7 +65,7 @@ import AddOrder from "./Pages/AddOrder";
         },
         {
           path: "/addOrder",
-          element: <AddOrder></AddOrder>,
+          element: <PrivateRoutes><AddOrder></AddOrder></PrivateRoutes>,
       },
       ]
     },

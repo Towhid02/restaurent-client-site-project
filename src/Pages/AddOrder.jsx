@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider";
 import Swal from "sweetalert2";
 import Order from "../Components/Order";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 
 const AddOrder = (data) => {
@@ -32,14 +34,18 @@ const AddOrder = (data) => {
     }
   }, [user?.email]);
     return (
-        <div>
-            <h1 className=" font-bold text-5xl my-5 font-grand">My Orders </h1>
+      <div>
+        <Navbar></Navbar>
+        <div className=" bg-orderBg p-10 rounded-2xl  bg-cover bg-center">
+            <h1 className=" font-bold text-5xl my-5 font-grand text-white">My Orders </h1>
     <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
       {
         orders.map((order) => (
         <Order key={order.id} order={order} />
       ))}
     </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 };
